@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.ant-modal-content{
+    @apply !bg-[#3b3b3b] !text-white
+}
+
+.ant-modal-footer{
+    @apply hidden
+}
+.anticon svg{
+    @apply !hidden
+}

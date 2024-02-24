@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -7,9 +8,9 @@ import { IoMdHome, IoMdSettings  } from "react-icons/io";
 import { MdOutlineQueueMusic, MdOutlineMusicNote  } from "react-icons/md";
 
 const Sidebar = () => {
-    const pathName = usePathname
+ const pathName =usePathname;
     return (
-        <div className='my-[56px] sticky top-0 w-[253px] px-6'>
+        <div className='my-[56px]  px-6 '>
             <Link href='#'>
                 <Image src='/images/logo.png' width={210} height={40} alt='logo' />
             </Link>
@@ -23,11 +24,11 @@ const Sidebar = () => {
                             Home
                         </Link>
                         <Link href='/Podcast' className={` flex items-center gap-[23px] text-[22px] font-semibold ${pathName === '/Podcast' ? 'text-[#069D95] text-[22px] font-semibold' : 'hover:text-[#069D95]'}`}>
-                            <IoMdHome />
+                            <MdOutlineMusicNote />
                             Podcast
                         </Link>
                         <Link href='/Settings' className={` flex items-center gap-[23px] text-[22px] font-semibold ${pathName === '/Settings' ? 'text-[#069D95] text-[22px] font-semibold' : 'hover:text-[#069D95]'}`}>
-                            <IoMdHome />
+                            <IoMdSettings />
                             Settings
                         </Link>
                     </div>
